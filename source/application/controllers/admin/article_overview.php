@@ -90,7 +90,7 @@ class Article_Overview extends oxAdminDetails
             if ($rs != false && $rs->recordCount() > 0) {
                 while (!$rs->EOF) {
                     $iPos++;
-                    if ($rs->fields[0] == $soxId) {
+                    if ($rs->fields['oxartid'] == $soxId) {
                         $iTopPos = $iPos;
                     }
                     $rs->moveNext();
